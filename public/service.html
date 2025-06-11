@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing - Aniya</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            margin: 0;
+            padding: 0;
+            color: #f0f4f1;
+        }
+        header {
+            background-color: rgba(34, 70, 34, 0.85);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #a5d6a7;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #dcedc8;
+            user-select: none;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: #dcedc8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #a5d6a7;
+        }
+        .auth-links a {
+            color: #dcedc8;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: 600;
+            border: 1.5px solid #a5d6a7;
+            padding: 6px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .auth-links a:hover {
+            background-color: #a5d6a7;
+            color: #2e4d20;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(34, 70, 34, 0.85);
+            padding: 30px 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #dcedc8;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .coffee-items {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .coffee-item {
+            background: rgba(165, 214, 167, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: #2e4d20;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .coffee-item:hover {
+            background-color: #81c784;
+            color: #1b3a0a;
+        }
+        .coffee-item h3 {
+            margin-top: 0;
+        }
+        .plan-details {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            text-align: left;
+        }
+        .coffee-item.active .plan-details {
+            display: block;
+        }
+        .subscribe-btn {
+            background-color: #4caf50;
+            border: none;
+            padding: 10px 20px;
+            color: #f0f4f1;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .subscribe-btn:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/7QpKsCX/logo.png" alt="Aniya Logo" class="logo-img" />
+                <span class="logo-text">Aniya</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html" aria-current="page">Service</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Our Service</h2>
+        <div class="coffee-items">
+            <div class="coffee-item" id="consultation">
+                <h3>Consultation</h3>
+                <p>Expert advice on sustainable farming and crop selection.</p>
+            </div>
+            <div class="coffee-item" id="farmManagement">
+                <h3>Farm Management</h3>
+                <p>Comprehensive farm management services for optimal yield.</p>
+            </div>
+            <div class="coffee-item" id="trainingWorkshops">
+                <h3>Training & Workshops</h3>
+                <p>Hands-on training sessions and workshops for new farmers.</p>
+            </div>
+        </div>
+        <div class="coffee-items">
+            <h2>Subscription Plan</h2>
+            <div class="coffee-item" id="smallScalePlan">
+                <h3>Small Scale ₱519 per tree</h3>
+                <p>Ideal for 10–199 trees, fully planted and maintained</p>
+                <div class="plan-details">
+                    <p>1. Small scale farming is ideal for those who want to plant with purpose — not just for profit.</p>
+                    <p>Think of it as your way of giving back to the earth and supporting Filipino farmers. For legacy builders, climate champions, and community contributors.</p>
+                    <p>Here's what you get:</p>
+                    <ul>
+                        <li>You’ll help plant real coffee trees in the highlands of Sitio Dueg, Tarlac.</li>
+                        <li>Though there’s no guaranteed financial return, you will receive:</li>
+                        <ul>
+                            <li>A small share of your tree’s harvest when it's ready</li>
+                            <li>A quarterly box of goods from Farm to Cup Philippines (fruits, vegetables, seasonal produce) for 1 year for free.</li>
+                        </ul>
+                    </ul>
+                    <p>This plan supports climate action, rural livelihoods, and reforestation. It’s not just farming — it’s planting legacy, one tree at a time.</p>
+                </div>
+                <button class="subscribe-btn" onclick="location.href='signup.html'">Let's plant!</button>
+            </div>
+            <div class="coffee-item" id="largeScalePlan">
+                <h3>Large Scale ₱407 per tree (min 200)</h3>
+                <p>Bulk planting with intercropping options</p>
+                <div class="plan-details">
+                    <p>2. Large scale farming is designed for those ready to grow a real agricultural asset — starting with a minimum of 200 coffee trees. For serious impact investors, companies, and organizations planting at scale.</p>
+                    <p>Here’s what makes it powerful:</p>
+                    <ul>
+                        <li>You receive a harvest share from your coffee tree portfolio</li>
+                        <li>While coffee takes 3–4 years to mature, we maximize your investment by offering:</li>
+                        <ul>
+                            <li>Intercropping options — grow crops and/or livestock between your coffee trees (faster ROI, may take only months while waiting for your harvest on your coffee.)</li>
+                        </ul>
+                    </ul>
+                    <p>This creates short-term yield while waiting for your long-term coffee harvest. Your entire farming operation is managed by Aniya & Farm to Cup Philippines — from planting to maintenance.</p>
+                    <p>Build your own farm legacy, earn from harvests, and help regenerate the land — all at once.</p>
+                </div>
+                <button class="subscribe-btn" onclick="location.href='signup.html'">Let's plant!</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const smallScalePlan = document.getElementById('smallScalePlan');
+        const largeScalePlan = document.getElementById('largeScalePlan');
+        smallScalePlan.addEventListener('click', () => {
+            smallScalePlan.classList.toggle('active');
+        });
+        largeScalePlan.addEventListener('click', () => {
+            largeScalePlan.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
